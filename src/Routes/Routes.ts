@@ -9,4 +9,16 @@ routes.post(
     .create(),
 );
 
+routes.get(
+  '/cars',
+  (req: Request, res: Response, next: NextFunction) => new CarController(req, res, next)
+    .getAll(),
+);
+
+routes.get(
+  '/cars/:id',
+  (req: Request, res: Response, next: NextFunction) => new CarController(req, res, next)
+    .getById(),
+);
+
 export default routes;

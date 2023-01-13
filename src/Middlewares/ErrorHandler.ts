@@ -7,7 +7,13 @@ class ErrorHandler {
     res: Response,
     next: NextFunction,
   ) {
-    res.status(500).json({ message: error.message });
+    let STATUS_ERROR;
+
+    if (error.message === 'Car not found') STATUS_ERROR = 404;
+    if (error.message === 'Invalid mongo id') STATUS_ERROR = 422;
+
+    res.status(STATUS_ERROR || 500).json({ message: error.message });
+
     next();
   }
 }
