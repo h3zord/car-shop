@@ -7,7 +7,7 @@ class CarService {
     private carODM: ICarODM,
   ) {}
 
-  private createCarDomain(car: ICar | null): Car | null {
+  private createCarDomain(car: ICar | null): Car | null {    
     if (car) return new Car(car);
   
     return null;
@@ -21,14 +21,15 @@ class CarService {
 
   public async getAll() {
     const cars = await this.carODM.getAll();
+    
     const carsList = cars.map((car) => this.createCarDomain(car));
   
     return carsList;
   }
 
   public async getById(id: string) {
-    const car = await this.carODM.getById(id);    
-      
+    const car = await this.carODM.getById(id);
+    
     return this.createCarDomain(car);
   }
 }

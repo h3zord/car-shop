@@ -20,19 +20,23 @@ class CarODM {
   }
 
   public async create(infoCar: ICar): Promise<ICar> {
-    return this.model.create({ ...infoCar });
+    const newCar = await this.model.create({ ...infoCar });
+        
+    return newCar;
   }
 
   public async getAll(): Promise<ICar[]> {
-    return this.model.find();
+    const carsList = await this.model.find();
+
+    return carsList;
   }
 
   public async getById(id: string): Promise<ICar | null> {
-    if (!isValidObjectId(id)) throw Error('Invalid mongo id');
+    if (!isValidObjectId(id)) throw new Error('Invalid mongo id');
 
     const car = await this.model.findById(id);
         
-    if (!car) throw Error('Car not found');
+    if (!car) throw new Error('Car not found');
   
     return car;
   }
