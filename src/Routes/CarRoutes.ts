@@ -1,30 +1,30 @@
 import { NextFunction, Request, Response, Router } from 'express';
 import CarController from '../Controllers/CarController';
 
-const routes = Router();
+const CarRoutes = Router();
 
-routes.post(
+CarRoutes.post(
   '/cars', 
   (req: Request, res: Response, next: NextFunction) => new CarController(req, res, next)
     .create(),
 );
 
-routes.get(
+CarRoutes.get(
   '/cars',
   (req: Request, res: Response, next: NextFunction) => new CarController(req, res, next)
     .getAll(),
 );
 
-routes.get(
+CarRoutes.get(
   '/cars/:id',
   (req: Request, res: Response, next: NextFunction) => new CarController(req, res, next)
     .getById(),
 );
 
-routes.put(
+CarRoutes.put(
   '/cars/:id',
   (req: Request, res: Response, next: NextFunction) => new CarController(req, res, next)
     .update(),
 );
 
-export default routes;
+export default CarRoutes;

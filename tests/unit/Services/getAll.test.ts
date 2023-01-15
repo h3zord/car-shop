@@ -6,7 +6,7 @@ import Car from '../../../src/Domains/Car';
 import CarService from '../../../src/Services/CarService';
 import CarODM from '../../../src/Models/CarODM';
 
-const inputArray: ICar[] = [
+const carsInput: ICar[] = [
   {
     id: '63c1d2974396a6f9eabefb31',
     model: 'Marea',
@@ -31,9 +31,9 @@ const inputArray: ICar[] = [
 
 describe('Deveria buscar todos os carro', function () {
   it('Deveria buscar todos os carros com sucesso', async function () {
-    const carsOutput: Car[] = inputArray.map((car) => new Car(car));
+    const carsOutput: Car[] = carsInput.map((car) => new Car(car));
 
-    Sinon.stub(Model, 'find').resolves(carsOutput);
+    Sinon.stub(Model, 'find').resolves(carsInput);
 
     const service = new CarService(new CarODM());
     const result = await service.getAll();
