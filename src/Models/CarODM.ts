@@ -1,4 +1,4 @@
-import { Schema, isValidObjectId, UpdateQuery } from 'mongoose';
+import { Schema } from 'mongoose';
 import ICar from '../Interfaces/ICar';
 import AbstractODM from './AbstractODM';
 
