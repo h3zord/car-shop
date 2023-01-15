@@ -3,9 +3,13 @@ import ICar from '../Interfaces/ICar';
 import ICarODM from '../Interfaces/ICarODM';
 
 class CarService {
-  constructor(
-    private carODM: ICarODM,
-  ) {}
+  private carODM: ICarODM;
+  private CAR_NOT_FOUND: string;
+
+  constructor(carODM: ICarODM) {
+    this.carODM = carODM;
+    this.CAR_NOT_FOUND = 'Car not found';
+  }
 
   private createCarDomain(car: ICar | null): Car | null {    
     if (car) return new Car(car);
@@ -30,7 +34,7 @@ class CarService {
   public async getById(id: string) {
     const car = await this.carODM.getById(id);
 
-    if (!car) throw new Error('Car not found');
+    if (!car) throw new Error(this.CAR_NOT_FOUND);
     
     return this.createCarDomain(car);
   }
@@ -38,9 +42,15 @@ class CarService {
   public async update(id: string, newInfoCar: Partial<ICar>) {
     const updatedCar = await this.carODM.update(id, newInfoCar);
 
-    if (!updatedCar) throw new Error('Car not found');
+    if (!updatedCar) throw new Error(this.CAR_NOT_FOUND);
 
     return this.createCarDomain(updatedCar);
+  }
+
+  public async delete(id: string) {
+    const deletedCar = await this.carODM.delete(id);
+    
+    if (!deletedCar) throw new Error(this.CAR_NOT_FOUND);
   }
 }
 

@@ -3,9 +3,13 @@ import IMotorcycle from '../Interfaces/IMotorcycle';
 import IMotorcycleODM from '../Interfaces/IMotorcycleODM';
 
 class MotorcycleService {
-  constructor(
-    private motorcycleODM: IMotorcycleODM,
-  ) {}
+  private motorcycleODM: IMotorcycleODM;
+  private MOTORCYCLE_NOT_FOUND: string;
+
+  constructor(motorcycleODM: IMotorcycleODM) {
+    this.motorcycleODM = motorcycleODM;
+    this.MOTORCYCLE_NOT_FOUND = 'Motorcycle not found';
+  }
 
   private createMotorcycleDomain(motorcycle: IMotorcycle | null): Motorcycle | null {
     if (motorcycle) return new Motorcycle(motorcycle);
@@ -31,7 +35,7 @@ class MotorcycleService {
   public async getById(id: string) {
     const motorcycle = await this.motorcycleODM.getById(id);
 
-    if (!motorcycle) throw new Error('Motorcycle not found');
+    if (!motorcycle) throw new Error(this.MOTORCYCLE_NOT_FOUND);
 
     return this.createMotorcycleDomain(motorcycle);
   }
@@ -39,9 +43,15 @@ class MotorcycleService {
   public async update(id: string, newInfoMotorcycle: Partial<IMotorcycle>) {
     const updatedMotorcycle = await this.motorcycleODM.update(id, newInfoMotorcycle);
 
-    if (!updatedMotorcycle) throw new Error('Motorcycle not found');
+    if (!updatedMotorcycle) throw new Error(this.MOTORCYCLE_NOT_FOUND);
 
     return this.createMotorcycleDomain(updatedMotorcycle);
+  }
+
+  public async delete(id: string) {
+    const deletedMotorcycle = await this.motorcycleODM.delete(id);
+    
+    if (!deletedMotorcycle) throw new Error(this.MOTORCYCLE_NOT_FOUND);
   }
 }
 

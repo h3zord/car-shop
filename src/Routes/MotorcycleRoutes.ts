@@ -3,6 +3,8 @@ import MotorcycleController from '../Controllers/MotorcycleController';
 
 const motorcycleRoutes = Router();
 
+const ROUTE = '/motorcycles/:id';
+
 motorcycleRoutes.post(
   '/motorcycles', 
   (req: Request, res: Response, next: NextFunction) => new MotorcycleController(req, res, next)
@@ -16,15 +18,21 @@ motorcycleRoutes.get(
 );
 
 motorcycleRoutes.get(
-  '/motorcycles/:id',
+  ROUTE,
   (req: Request, res: Response, next: NextFunction) => new MotorcycleController(req, res, next)
     .getById(),
 );
 
 motorcycleRoutes.put(
-  '/motorcycles/:id',
+  ROUTE,
   (req: Request, res: Response, next: NextFunction) => new MotorcycleController(req, res, next)
     .update(),
+);
+
+motorcycleRoutes.delete(
+  ROUTE,
+  (req: Request, res: Response, next: NextFunction) => new MotorcycleController(req, res, next)
+    .delete(),
 );
 
 export default motorcycleRoutes;

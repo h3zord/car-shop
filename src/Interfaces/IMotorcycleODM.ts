@@ -5,6 +5,7 @@ interface IMotorcycleODM {
   getAll(): Promise<IMotorcycle[]>,
   getById(id: string): Promise<IMotorcycle | null>,
   update(id: string, newInfoMotorcycle: Partial<IMotorcycle>): Promise<IMotorcycle | null>,
+  delete(id: string): Promise<IMotorcycle | null>,
 }
 
 export default IMotorcycleODM;
