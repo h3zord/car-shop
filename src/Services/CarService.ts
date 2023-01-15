@@ -38,6 +38,8 @@ class CarService {
   public async update(id: string, newInfoCar: Partial<ICar>) {
     const updatedCar = await this.carODM.update(id, newInfoCar);
 
+    if (!updatedCar) throw new Error('Car not found');
+
     return this.createCarDomain(updatedCar);
   }
 }
