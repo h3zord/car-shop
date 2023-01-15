@@ -29,6 +29,8 @@ class CarService {
 
   public async getById(id: string) {
     const car = await this.carODM.getById(id);
+
+    if (!car) throw new Error('Car not found');
     
     return this.createCarDomain(car);
   }

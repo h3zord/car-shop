@@ -18,6 +18,23 @@ class MotorcycleService {
 
     return this.createMotorcycleDomain(newMotorcycle);
   }
+
+  public async getAll() {
+    const motorcycles = await this.motorcycleODM.getAll();
+
+    const motorcyclesList = motorcycles
+      .map((motorcycle) => this.createMotorcycleDomain(motorcycle));
+
+    return motorcyclesList;
+  }
+
+  public async getById(id: string) {
+    const motorcycle = await this.motorcycleODM.getById(id);
+
+    if (!motorcycle) throw new Error('Motorcycle not found');
+
+    return this.createMotorcycleDomain(motorcycle);
+  }
 }
 
 export default MotorcycleService;
