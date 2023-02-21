@@ -19,6 +19,10 @@ class CarController {
   public async create() {
     const infoCar: ICar = this.req.body;
 
+    if (!Object.keys(infoCar).length) {
+      return this.res.status(400).json({ message: 'Body not found' });
+    }
+
     try {
       const newCar = await this.service.create(infoCar);
   
@@ -53,6 +57,10 @@ class CarController {
   public async update() {
     const { id } = this.req.params;
     const newInfoCar: Partial<ICar> = this.req.body;
+
+    if (!Object.keys(newInfoCar).length) {
+      return this.res.status(400).json({ message: 'Body not found' });
+    }
 
     try {
       const updatedCar = await this.service.update(id, newInfoCar);

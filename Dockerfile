@@ -11,5 +11,3 @@ COPY . .
 RUN chown node:node /app
 
 USER node
-
-CMD ["npm", "run", "dev"]

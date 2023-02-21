@@ -5,6 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "tsnd src/server.ts",
+    "start:prod": "tsc && node ./swagger.js && node ./dist/src/server.js",
+    "start:dev": "tsc && node ./swagger.js && tsnd --respawn src/server.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest -i --verbose",
     "test:mocha": "mocha -r ts-node/register tests/**/**/*.test.ts --exit -t 60000",
@@ -20,6 +22,7 @@
     "@types/node": "16.11.7",
     "@types/sinon": "10.0.11",
     "@types/supertest": "2.0.11",
+    "@types/swagger-ui-express": "^4.1.3",
     "@typescript-eslint/eslint-plugin": "5.3.1",
     "@typescript-eslint/parser": "5.3.1",
     "chai": "4.3.6",
@@ -44,6 +47,8 @@
   },
   "dependencies": {
     "express": "4.17.1",
-    "mongoose": "6.1.8"
+    "mongoose": "6.1.8",
+    "swagger-autogen": "^2.23.1",
+    "swagger-ui-express": "^4.6.1"
   }
 }

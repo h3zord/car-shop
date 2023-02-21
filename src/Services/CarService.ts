@@ -40,7 +40,7 @@ class CarService {
   }
 
   public async update(id: string, newInfoCar: Partial<ICar>) {
-    const updatedCar = await this.carODM.update(id, newInfoCar);
+    const updatedCar = await this.carODM.update(id, newInfoCar);    
 
     if (!updatedCar) throw new Error(this.CAR_NOT_FOUND);
 

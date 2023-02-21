@@ -19,6 +19,10 @@ class MotorcycleController {
   public async create() {    
     const infoMotorcycle: IMotorcycle = this.req.body;
 
+    if (!Object.keys(infoMotorcycle).length) {
+      return this.res.status(404).json({ message: 'Body not found' });
+    }
+
     try {
       const newMotorcycle = await this.service.create(infoMotorcycle);
 
@@ -53,6 +57,10 @@ class MotorcycleController {
   public async update() {
     const { id } = this.req.params;
     const newInfoMotorcycle: Partial<IMotorcycle> = this.req.body;
+
+    if (!Object.keys(newInfoMotorcycle).length) {
+      return this.res.status(404).json({ message: 'Body not found' });
+    }
 
     try {
       const updatedMotorcycle = await this.service.update(id, newInfoMotorcycle);
