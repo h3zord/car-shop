@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "API Car Shop",
-    "description": "Esta documentação é destinada ao projeto Car Shop"
+    "description": "Esta documentação é destinada ao projeto Car Shop."
   },
   "host": "localhost:3013",
   "basePath": "/",
@@ -39,7 +39,6 @@
             "name": "INFO",
             "in": "body",
             "description": "Informações necessárias para criar um novo carro.",
-            "required": true,
             "schema": {
               "$ref": "#/definitions/Car"
             }
@@ -75,6 +74,9 @@
         "parameters": [],
         "responses": {
           "200": {
+            "schema": {
+              "$ref": "#/definitions/Cars"
+            },
             "description": "Requisição para listar todos os carros efetuada com sucesso!"
           }
         }
@@ -135,7 +137,6 @@
             "name": "INFO",
             "in": "body",
             "description": "Informações necessárias para atualizar o carro.",
-            "required": true,
             "schema": {
               "$ref": "#/definitions/Car"
             }
@@ -220,7 +221,6 @@
             "name": "INFO",
             "in": "body",
             "description": "Informações necessárias para criar uma nova moto.",
-            "required": true,
             "schema": {
               "$ref": "#/definitions/Motorcycle"
             }
@@ -256,6 +256,9 @@
         "parameters": [],
         "responses": {
           "200": {
+            "schema": {
+              "$ref": "#/definitions/Motorcycles"
+            },
             "description": "Requisição para listar todas as motos efetuada com sucesso!"
           }
         }
@@ -316,7 +319,6 @@
             "name": "INFO",
             "in": "body",
             "description": "Informações necessárias para atualizar a moto.",
-            "required": true,
             "schema": {
               "$ref": "#/definitions/Motorcycle"
             }
@@ -432,6 +434,50 @@
         "seatsQty"
       ]
     },
+    "CarList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "example": "Reno Clio"
+          },
+          "year": {
+            "type": "number",
+            "example": 2008
+          },
+          "color": {
+            "type": "string",
+            "example": "White"
+          },
+          "status": {
+            "type": "boolean",
+            "example": true
+          },
+          "buyValue": {
+            "type": "number",
+            "example": 10000
+          },
+          "doorsQty": {
+            "type": "number",
+            "example": 4
+          },
+          "seatsQty": {
+            "type": "number",
+            "example": 5
+          }
+        },
+        "required": [
+          "model",
+          "year",
+          "color",
+          "buyValue",
+          "doorsQty",
+          "seatsQty"
+        ]
+      }
+    },
     "Motorcycle": {
       "type": "object",
       "properties": {
@@ -476,6 +522,54 @@
         "category",
         "engineCapacity"
       ]
+    },
+    "MotorcycleList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "example": "Honda CG Titan 125"
+          },
+          "year": {
+            "type": "number",
+            "example": 2005
+          },
+          "color": {
+            "type": "string",
+            "example": "Black"
+          },
+          "status": {
+            "type": "boolean",
+            "example": true
+          },
+          "buyValue": {
+            "type": "number",
+            "example": 6500
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Street",
+              "Custom",
+              "Trail"
+            ]
+          },
+          "engineCapacity": {
+            "type": "number",
+            "example": 125
+          }
+        },
+        "required": [
+          "model",
+          "year",
+          "color",
+          "buyValue",
+          "category",
+          "engineCapacity"
+        ]
+      }
     },
     "InvalidBodyError": {
       "type": "object",

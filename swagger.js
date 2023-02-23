@@ -32,6 +32,17 @@ const doc = {
       $doorsQty: 4,
       $seatsQty: 5,
     },
+    CarList: [
+      {
+        $model: 'Reno Clio',
+        $year: 2008,
+        $color: 'White',
+        status: true,
+        $buyValue: 10000,
+        $doorsQty: 4,
+        $seatsQty: 5,
+      },
+    ],
     Motorcycle: {
       $model: 'Honda CG Titan 125',
       $year: 2005,
@@ -43,6 +54,19 @@ const doc = {
       },
       $engineCapacity: 125,
     },
+    MotorcycleList: [
+      {
+        $model: 'Honda CG Titan 125',
+        $year: 2005,
+        $color: 'Black',
+        status: true,
+        $buyValue: 6500,
+        $category: {
+          '@enum': ['Street', 'Custom', 'Trail'],
+        },
+        $engineCapacity: 125,
+      },
+    ],
     InvalidBodyError: {
       message: 'Invalid body',
     },

@@ -16,8 +16,8 @@ carRoutes.post(
 
   /* #swagger.parameters['INFO'] = {
     in: 'body',
+    type: 'object',
     description: 'Informações necessárias para criar um novo carro.',
-    required: true,
     schema: { $ref: "#/definitions/Car" },
   } */
 
@@ -46,7 +46,8 @@ carRoutes.get(
   // #swagger.summary = 'Listar todos os carros'
   // #swagger.description = 'Endpoint para listar todos os carros cadastrados no banco de dados.'
 
-  /* #swagger.responses[200] = { 
+  /* #swagger.responses[200] = {
+    schema: { $ref: "#/definitions/Cars" },
     description: 'Requisição para listar todos os carros efetuada com sucesso!' 
   } */,
 );
@@ -63,6 +64,7 @@ carRoutes.get(
   /* #swagger.parameters['id'] = {
     in: 'path',
     type: 'string',
+    required: true,
     description: 'ID necessário para buscar o carro cadastrado no banco de dados.'
   } */
 
@@ -94,13 +96,14 @@ carRoutes.put(
   /* #swagger.parameters['id'] = {
     in: 'path',
     type: 'string',
+    required: true,
     description: 'ID necessário para buscar o carro cadastrado no banco de dados.'
   } */
 
   /* #swagger.parameters['INFO'] = {
     in: 'body',
+    type: 'object',
     description: 'Informações necessárias para atualizar o carro.',
-    required: true,
     schema: { $ref: "#/definitions/Car" },
   } */
 
@@ -142,6 +145,7 @@ carRoutes.delete(
   /* #swagger.parameters['id'] = {
     in: 'path',
     type: 'string',
+    required: true,
     description: 'ID necessário para buscar o carro cadastrado no banco de dados.'
   } */
 

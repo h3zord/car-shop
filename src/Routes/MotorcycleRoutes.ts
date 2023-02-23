@@ -16,8 +16,8 @@ motorcycleRoutes.post(
 
   /* #swagger.parameters['INFO'] = {
     in: 'body',
+    type: 'object',
     description: 'Informações necessárias para criar uma nova moto.',
-    required: true,
     schema: { $ref: "#/definitions/Motorcycle" },
   } */
 
@@ -47,6 +47,7 @@ motorcycleRoutes.get(
   // #swagger.description = 'Endpoint para listar todas as motos cadastradas no banco de dados.'
 
   /* #swagger.responses[200] = { 
+    schema: { $ref: "#/definitions/Motorcycles" },
     description: 'Requisição para listar todas as motos efetuada com sucesso!' 
   } */,
 );
@@ -63,6 +64,7 @@ motorcycleRoutes.get(
   /* #swagger.parameters['id'] = {
     in: 'path',
     type: 'string',
+    required: true,
     description: 'ID necessário para buscar a moto cadastrada no banco de dados.'
   } */
 
@@ -94,13 +96,14 @@ motorcycleRoutes.put(
   /* #swagger.parameters['id'] = {
     in: 'path',
     type: 'string',
+    required: true,
     description: 'ID necessário para buscar a moto cadastrada no banco de dados.'
   } */
 
   /* #swagger.parameters['INFO'] = {
     in: 'body',
+    type: 'object',
     description: 'Informações necessárias para atualizar a moto.',
-    required: true,
     schema: { $ref: "#/definitions/Motorcycle" },
   } */
 
@@ -142,6 +145,7 @@ motorcycleRoutes.delete(
   /* #swagger.parameters['id'] = {
     in: 'path',
     type: 'string',
+    required: true,
     description: 'ID necessário para buscar a moto cadastrada no banco de dados.'
   } */
 
