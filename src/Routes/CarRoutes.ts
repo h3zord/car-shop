@@ -14,7 +14,7 @@ carRoutes.post(
   // #swagger.summary = 'Criar um novo carro'
   // #swagger.description = 'Endpoint para cadastrar um novo carro no banco de dados.'
 
-  /* #swagger.parameters['INFO'] = {
+  /* #swagger.parameters['info'] = {
     in: 'body',
     type: 'object',
     description: 'Informações necessárias para criar um novo carro.',
@@ -47,7 +47,7 @@ carRoutes.get(
   // #swagger.description = 'Endpoint para listar todos os carros cadastrados no banco de dados.'
 
   /* #swagger.responses[200] = {
-    schema: { $ref: "#/definitions/Cars" },
+    schema: { $ref: "#/definitions/Car" },
     description: 'Requisição para listar todos os carros efetuada com sucesso!' 
   } */,
 );
@@ -59,7 +59,7 @@ carRoutes.get(
     
   // #swagger.tags = ['Cars']
   // #swagger.summary = 'Buscar um carro pelo seu ID'
-  // #swagger.description = 'Endpoint para buscar um carro cadastrado no banco de dados pelo seu ID'
+  // #swagger.description = 'Endpoint para buscar um carro cadastrado no banco de dados pelo seu ID.'
 
   /* #swagger.parameters['id'] = {
     in: 'path',
@@ -74,7 +74,7 @@ carRoutes.get(
   } */
 
   /* #swagger.responses[404] = { 
-    schema: { $ref: "#/definitions/IdNotFoundError" },
+    schema: { $ref: "#/definitions/CarNotFoundError" },
     description: 'Erro! A requisição falhou! O carro não foi encontrado.' 
   } */
 
@@ -100,7 +100,7 @@ carRoutes.put(
     description: 'ID necessário para buscar o carro cadastrado no banco de dados.'
   } */
 
-  /* #swagger.parameters['INFO'] = {
+  /* #swagger.parameters['info'] = {
     in: 'body',
     type: 'object',
     description: 'Informações necessárias para atualizar o carro.',
@@ -118,7 +118,7 @@ carRoutes.put(
   } */
 
   /* #swagger.responses[404] = { 
-    schema: { $ref: "#/definitions/IdNotFoundError" },
+    schema: { $ref: "#/definitions/CarNotFoundError" },
     description: 'Erro! A requisição falhou! O carro não foi encontrado.' 
   } */
 
@@ -140,7 +140,7 @@ carRoutes.delete(
 
   // #swagger.tags = ['Cars']
   // #swagger.summary = 'Deletar um carro buscando pelo seu ID'
-  // #swagger.description = 'Endpoint para deletar um carro cadastrado no banco de dados.'
+  // #swagger.description = 'Endpoint para deletar um carro cadastrado no banco de dados buscando pelo seu ID.'
 
   /* #swagger.parameters['id'] = {
     in: 'path',
@@ -154,7 +154,7 @@ carRoutes.delete(
   } */
 
   /* #swagger.responses[404] = { 
-    schema: { $ref: "#/definitions/IdNotFoundError" },
+    schema: { $ref: "#/definitions/CarNotFoundError" },
     description: 'Erro! A requisição falhou! O carro não foi encontrado.' 
   } */
 

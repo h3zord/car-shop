@@ -15,7 +15,7 @@ class MotorcycleController {
     async create() {
         const infoMotorcycle = this.req.body;
         if (!Object.keys(infoMotorcycle).length) {
-            return this.res.status(404).json({ message: 'Body not found' });
+            return this.res.status(400).json({ message: 'Body not found' });
         }
         try {
             const newMotorcycle = await this.service.create(infoMotorcycle);
@@ -48,7 +48,7 @@ class MotorcycleController {
         const { id } = this.req.params;
         const newInfoMotorcycle = this.req.body;
         if (!Object.keys(newInfoMotorcycle).length) {
-            return this.res.status(404).json({ message: 'Body not found' });
+            return this.res.status(400).json({ message: 'Body not found' });
         }
         try {
             const updatedMotorcycle = await this.service.update(id, newInfoMotorcycle);

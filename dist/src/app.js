@@ -24,7 +24,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
-const swaggerDocument = __importStar(require("../swagger-output.json"));
+const swaggerDocument = __importStar(require("./swagger-output.json"));
 const ErrorHandler_1 = __importDefault(require("./Middlewares/ErrorHandler"));
 const CarRoutes_1 = __importDefault(require("./Routes/CarRoutes"));
 const MotorcycleRoutes_1 = __importDefault(require("./Routes/MotorcycleRoutes"));

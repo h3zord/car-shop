@@ -14,7 +14,7 @@ motorcycleRoutes.post(
   // #swagger.summary = 'Criar uma nova moto'
   // #swagger.description = 'Endpoint para cadastrar um nova moto no banco de dados.'
 
-  /* #swagger.parameters['INFO'] = {
+  /* #swagger.parameters['info'] = {
     in: 'body',
     type: 'object',
     description: 'Informações necessárias para criar uma nova moto.',
@@ -47,7 +47,7 @@ motorcycleRoutes.get(
   // #swagger.description = 'Endpoint para listar todas as motos cadastradas no banco de dados.'
 
   /* #swagger.responses[200] = { 
-    schema: { $ref: "#/definitions/Motorcycles" },
+    schema: { $ref: "#/definitions/Motorcycle" },
     description: 'Requisição para listar todas as motos efetuada com sucesso!' 
   } */,
 );
@@ -74,7 +74,7 @@ motorcycleRoutes.get(
   } */
 
   /* #swagger.responses[404] = { 
-    schema: { $ref: "#/definitions/IdNotFoundError" },
+    schema: { $ref: "#/definitions/MotorcycleNotFoundError" },
     description: 'Erro! A requisição falhou! A moto não foi encontrada.' 
   } */
 
@@ -100,7 +100,7 @@ motorcycleRoutes.put(
     description: 'ID necessário para buscar a moto cadastrada no banco de dados.'
   } */
 
-  /* #swagger.parameters['INFO'] = {
+  /* #swagger.parameters['info'] = {
     in: 'body',
     type: 'object',
     description: 'Informações necessárias para atualizar a moto.',
@@ -118,8 +118,8 @@ motorcycleRoutes.put(
   } */
 
   /* #swagger.responses[404] = { 
-    schema: { $ref: "#/definitions/IdNotFoundError" },
-    description: 'Erro! A requisição falhou! a moto não foi encontrada.' 
+    schema: { $ref: "#/definitions/MotorcycleNotFoundError" },
+    description: 'Erro! A requisição falhou! A moto não foi encontrada.' 
   } */
 
   /* #swagger.responses[422] = { 
@@ -140,7 +140,7 @@ motorcycleRoutes.delete(
   
   // #swagger.tags = ['Motorcycles']
   // #swagger.summary = 'Deletar uma moto buscando pelo seu ID'
-  // #swagger.description = 'Endpoint para deletar uma moto cadastrada no banco de dados.'
+  // #swagger.description = 'Endpoint para deletar uma moto cadastrada no banco de dados buscando pelo seu ID.'
 
   /* #swagger.parameters['id'] = {
     in: 'path',
@@ -154,7 +154,7 @@ motorcycleRoutes.delete(
   } */
 
   /* #swagger.responses[404] = { 
-    schema: { $ref: "#/definitions/IdNotFoundError" },
+    schema: { $ref: "#/definitions/MotorcycleNotFoundError" },
     description: 'Erro! A requisição falhou! A moto não foi encontrada.' 
   } */
 

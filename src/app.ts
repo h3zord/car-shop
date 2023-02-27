@@ -1,6 +1,6 @@
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
-import * as swaggerDocument from '../swagger-output.json';
+import * as swaggerDocument from './swagger-output.json';
 import ErrorHandler from './Middlewares/ErrorHandler';
 import carRoutes from './Routes/CarRoutes';
 import motorcycleRoutes from './Routes/MotorcycleRoutes';

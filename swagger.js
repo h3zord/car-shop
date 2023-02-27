@@ -4,10 +4,10 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     version: '1.0.0',
-    title: 'API Car Shop',
+    title: 'Car Shop API',
     description: 'Esta documentação é destinada ao projeto Car Shop.',
   },
-  host: 'localhost:3013',
+  host: 'localhost:3000',
   basePath: '/',
   schemes: ['http'],
   consumes: ['application/json'],
@@ -76,13 +76,16 @@ const doc = {
     InvalidIdError: {
       message: 'Invalid mongo id',
     },
-    IdNotFoundError: {
+    CarNotFoundError: {
       message: 'Car not found',
+    },
+    MotorcycleNotFoundError: {
+      message: 'Motorcycle not found',
     },
   },
 };
 
-const outputFile = './swagger-output.json';
+const outputFile = './src/swagger-output.json';
 const endpointsFiles = [
   './dist/src/Routes/CarRoutes.js',
   './dist/src/Routes/MotorcycleRoutes.js',

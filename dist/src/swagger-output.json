@@ -2,10 +2,10 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0.0",
-        "title": "API Car Shop",
+        "title": "Car Shop API",
         "description": "Esta documentação é destinada ao projeto Car Shop."
     },
-    "host": "localhost:3013",
+    "host": "localhost:3000",
     "basePath": "/",
     "tags": [
         {
@@ -36,7 +36,7 @@
                 "description": "Endpoint para cadastrar um novo carro no banco de dados.",
                 "parameters": [
                     {
-                        "name": "INFO",
+                        "name": "info",
                         "in": "body",
                         "description": "Informações necessárias para criar um novo carro.",
                         "schema": {
@@ -75,7 +75,7 @@
                 "responses": {
                     "200": {
                         "schema": {
-                            "$ref": "#/definitions/Cars"
+                            "$ref": "#/definitions/Car"
                         },
                         "description": "Requisição para listar todos os carros efetuada com sucesso!"
                     }
@@ -88,7 +88,7 @@
                     "Cars"
                 ],
                 "summary": "Buscar um carro pelo seu ID",
-                "description": "Endpoint para buscar um carro cadastrado no banco de dados pelo seu ID",
+                "description": "Endpoint para buscar um carro cadastrado no banco de dados pelo seu ID.",
                 "parameters": [
                     {
                         "name": "id",
@@ -134,7 +134,7 @@
                         "description": "ID necessário para buscar o carro cadastrado no banco de dados."
                     },
                     {
-                        "name": "INFO",
+                        "name": "info",
                         "in": "body",
                         "description": "Informações necessárias para atualizar o carro.",
                         "schema": {
@@ -180,7 +180,7 @@
                     "Cars"
                 ],
                 "summary": "Deletar um carro buscando pelo seu ID",
-                "description": "Endpoint para deletar um carro cadastrado no banco de dados.",
+                "description": "Endpoint para deletar um carro cadastrado no banco de dados buscando pelo seu ID.",
                 "parameters": [
                     {
                         "name": "id",
@@ -218,7 +218,7 @@
                 "description": "Endpoint para cadastrar um nova moto no banco de dados.",
                 "parameters": [
                     {
-                        "name": "INFO",
+                        "name": "info",
                         "in": "body",
                         "description": "Informações necessárias para criar uma nova moto.",
                         "schema": {
@@ -257,7 +257,7 @@
                 "responses": {
                     "200": {
                         "schema": {
-                            "$ref": "#/definitions/Motorcycles"
+                            "$ref": "#/definitions/Motorcycle"
                         },
                         "description": "Requisição para listar todas as motos efetuada com sucesso!"
                     }
@@ -316,7 +316,7 @@
                         "description": "ID necessário para buscar a moto cadastrada no banco de dados."
                     },
                     {
-                        "name": "INFO",
+                        "name": "info",
                         "in": "body",
                         "description": "Informações necessárias para atualizar a moto.",
                         "schema": {
@@ -362,7 +362,7 @@
                     "Motorcycles"
                 ],
                 "summary": "Deletar uma moto buscando pelo seu ID",
-                "description": "Endpoint para deletar uma moto cadastrada no banco de dados.",
+                "description": "Endpoint para deletar uma moto cadastrada no banco de dados buscando pelo seu ID.",
                 "parameters": [
                     {
                         "name": "id",

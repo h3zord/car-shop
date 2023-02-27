@@ -12,7 +12,7 @@ carRoutes.post('/cars', (req, res, next) => new CarController_1.default(req, res
 // #swagger.tags = ['Cars']
 // #swagger.summary = 'Criar um novo carro'
 // #swagger.description = 'Endpoint para cadastrar um novo carro no banco de dados.'
-/* #swagger.parameters['INFO'] = {
+/* #swagger.parameters['info'] = {
   in: 'body',
   type: 'object',
   description: 'Informações necessárias para criar um novo carro.',
@@ -36,14 +36,14 @@ carRoutes.get('/cars', (req, res, next) => new CarController_1.default(req, res,
 // #swagger.summary = 'Listar todos os carros'
 // #swagger.description = 'Endpoint para listar todos os carros cadastrados no banco de dados.'
 /* #swagger.responses[200] = {
-  schema: { $ref: "#/definitions/Cars" },
+  schema: { $ref: "#/definitions/Car" },
   description: 'Requisição para listar todos os carros efetuada com sucesso!'
 } */ );
 carRoutes.get(ROUTE, (req, res, next) => new CarController_1.default(req, res, next)
     .getById()
 // #swagger.tags = ['Cars']
 // #swagger.summary = 'Buscar um carro pelo seu ID'
-// #swagger.description = 'Endpoint para buscar um carro cadastrado no banco de dados pelo seu ID'
+// #swagger.description = 'Endpoint para buscar um carro cadastrado no banco de dados pelo seu ID.'
 /* #swagger.parameters['id'] = {
   in: 'path',
   type: 'string',
@@ -73,7 +73,7 @@ carRoutes.put(ROUTE, (req, res, next) => new CarController_1.default(req, res, n
   required: true,
   description: 'ID necessário para buscar o carro cadastrado no banco de dados.'
 } */
-/* #swagger.parameters['INFO'] = {
+/* #swagger.parameters['info'] = {
   in: 'body',
   type: 'object',
   description: 'Informações necessárias para atualizar o carro.',
@@ -103,7 +103,7 @@ carRoutes.delete(ROUTE, (req, res, next) => new CarController_1.default(req, res
     .delete()
 // #swagger.tags = ['Cars']
 // #swagger.summary = 'Deletar um carro buscando pelo seu ID'
-// #swagger.description = 'Endpoint para deletar um carro cadastrado no banco de dados.'
+// #swagger.description = 'Endpoint para deletar um carro cadastrado no banco de dados buscando pelo seu ID.'
 /* #swagger.parameters['id'] = {
   in: 'path',
   type: 'string',

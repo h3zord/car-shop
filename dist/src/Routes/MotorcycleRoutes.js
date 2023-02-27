@@ -12,7 +12,7 @@ motorcycleRoutes.post('/motorcycles', (req, res, next) => new MotorcycleControll
 // #swagger.tags = ['Motorcycles']
 // #swagger.summary = 'Criar uma nova moto'
 // #swagger.description = 'Endpoint para cadastrar um nova moto no banco de dados.'
-/* #swagger.parameters['INFO'] = {
+/* #swagger.parameters['info'] = {
   in: 'body',
   type: 'object',
   description: 'Informações necessárias para criar uma nova moto.',
@@ -36,7 +36,7 @@ motorcycleRoutes.get('/motorcycles', (req, res, next) => new MotorcycleControlle
 // #swagger.summary = 'Listar todas as motos'
 // #swagger.description = 'Endpoint para listar todas as motos cadastradas no banco de dados.'
 /* #swagger.responses[200] = {
-  schema: { $ref: "#/definitions/Motorcycles" },
+  schema: { $ref: "#/definitions/Motorcycle" },
   description: 'Requisição para listar todas as motos efetuada com sucesso!'
 } */ );
 motorcycleRoutes.get(ROUTE, (req, res, next) => new MotorcycleController_1.default(req, res, next)
@@ -73,7 +73,7 @@ motorcycleRoutes.put(ROUTE, (req, res, next) => new MotorcycleController_1.defau
   required: true,
   description: 'ID necessário para buscar a moto cadastrada no banco de dados.'
 } */
-/* #swagger.parameters['INFO'] = {
+/* #swagger.parameters['info'] = {
   in: 'body',
   type: 'object',
   description: 'Informações necessárias para atualizar a moto.',
@@ -103,7 +103,7 @@ motorcycleRoutes.delete(ROUTE, (req, res, next) => new MotorcycleController_1.de
     .delete()
 // #swagger.tags = ['Motorcycles']
 // #swagger.summary = 'Deletar uma moto buscando pelo seu ID'
-// #swagger.description = 'Endpoint para deletar uma moto cadastrada no banco de dados.'
+// #swagger.description = 'Endpoint para deletar uma moto cadastrada no banco de dados buscando pelo seu ID.'
 /* #swagger.parameters['id'] = {
   in: 'path',
   type: 'string',
