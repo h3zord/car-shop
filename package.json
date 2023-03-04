@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "tsnd src/server.ts",
-    "start:prod": "tsc && node ./swagger.js && node ./dist/src/server.js",
+    "start": "tsc && node ./swagger.js && tsc && node ./dist/src/Models/seedDB.js && node ./dist/src/server.js",
     "start:dev": "tsc && node ./swagger.js && tsnd --respawn src/server.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest -i --verbose",

@@ -7,9 +7,9 @@ const doc = {
     title: 'Car Shop API',
     description: 'Esta documentação é destinada ao projeto Car Shop.',
   },
-  host: 'localhost:3000',
+  host: 'car-shop.up.railway.app',
   basePath: '/',
-  schemes: ['http'],
+  schemes: ['https', 'http'],
   consumes: ['application/json'],
   produces: ['application/json'],
   tags: [
