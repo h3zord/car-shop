@@ -55,7 +55,7 @@ motorcycleRoutes.get(ROUTE, (req, res, next) => new MotorcycleController_1.defau
   description: 'Requisição para buscar uma moto pelo seu ID efetuada com sucesso!'
 } */
 /* #swagger.responses[404] = {
-  schema: { $ref: "#/definitions/IdNotFoundError" },
+  schema: { $ref: "#/definitions/MotorcycleNotFoundError" },
   description: 'Erro! A requisição falhou! A moto não foi encontrada.'
 } */
 /* #swagger.responses[422] = {
@@ -88,8 +88,8 @@ motorcycleRoutes.put(ROUTE, (req, res, next) => new MotorcycleController_1.defau
   description: 'Erro! A requisição falhou! O body com as informações necessárias não foi encontrado.'
 } */
 /* #swagger.responses[404] = {
-  schema: { $ref: "#/definitions/IdNotFoundError" },
-  description: 'Erro! A requisição falhou! a moto não foi encontrada.'
+  schema: { $ref: "#/definitions/MotorcycleNotFoundError" },
+  description: 'Erro! A requisição falhou! A moto não foi encontrada.'
 } */
 /* #swagger.responses[422] = {
   schema: { $ref: "#/definitions/InvalidIdError" },
@@ -114,7 +114,7 @@ motorcycleRoutes.delete(ROUTE, (req, res, next) => new MotorcycleController_1.de
   description: 'A requisição para deletar uma moto cadastrada no banco de dados foi efetuada com sucesso.'
 } */
 /* #swagger.responses[404] = {
-  schema: { $ref: "#/definitions/IdNotFoundError" },
+  schema: { $ref: "#/definitions/MotorcycleNotFoundError" },
   description: 'Erro! A requisição falhou! A moto não foi encontrada.'
 } */
 /* #swagger.responses[422] = {

@@ -7,6 +7,7 @@ import motorcycleRoutes from './Routes/MotorcycleRoutes';
 
 const app = express();
 app.use(express.json());
+app.get('/', (_req, res) => res.json({ ok: true }));
 app.use(carRoutes);
 app.use(motorcycleRoutes);
 app.use(ErrorHandler.handle);

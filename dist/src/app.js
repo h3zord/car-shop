@@ -30,6 +30,7 @@ const CarRoutes_1 = __importDefault(require("./Routes/CarRoutes"));
 const MotorcycleRoutes_1 = __importDefault(require("./Routes/MotorcycleRoutes"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
+app.get('/', (_req, res) => res.json({ ok: true }));
 app.use(CarRoutes_1.default);
 app.use(MotorcycleRoutes_1.default);
 app.use(ErrorHandler_1.default.handle);

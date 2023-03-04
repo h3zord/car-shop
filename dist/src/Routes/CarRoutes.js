@@ -55,7 +55,7 @@ carRoutes.get(ROUTE, (req, res, next) => new CarController_1.default(req, res, n
   description: 'Requisição para buscar um carro pelo seu ID efetuada com sucesso!'
 } */
 /* #swagger.responses[404] = {
-  schema: { $ref: "#/definitions/IdNotFoundError" },
+  schema: { $ref: "#/definitions/CarNotFoundError" },
   description: 'Erro! A requisição falhou! O carro não foi encontrado.'
 } */
 /* #swagger.responses[422] = {
@@ -88,7 +88,7 @@ carRoutes.put(ROUTE, (req, res, next) => new CarController_1.default(req, res, n
   description: 'Erro! A requisição falhou! O body com as informações necessárias não foi encontrado.'
 } */
 /* #swagger.responses[404] = {
-  schema: { $ref: "#/definitions/IdNotFoundError" },
+  schema: { $ref: "#/definitions/CarNotFoundError" },
   description: 'Erro! A requisição falhou! O carro não foi encontrado.'
 } */
 /* #swagger.responses[422] = {
@@ -114,7 +114,7 @@ carRoutes.delete(ROUTE, (req, res, next) => new CarController_1.default(req, res
   description: 'A requisição para deletar um carro cadastrado no banco de dados foi efetuada com sucesso.'
 } */
 /* #swagger.responses[404] = {
-  schema: { $ref: "#/definitions/IdNotFoundError" },
+  schema: { $ref: "#/definitions/CarNotFoundError" },
   description: 'Erro! A requisição falhou! O carro não foi encontrado.'
 } */
 /* #swagger.responses[422] = {

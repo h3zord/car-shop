@@ -107,7 +107,7 @@
           },
           "404": {
             "schema": {
-              "$ref": "#/definitions/IdNotFoundError"
+              "$ref": "#/definitions/CarNotFoundError"
             },
             "description": "Erro! A requisição falhou! O carro não foi encontrado."
           },
@@ -157,7 +157,7 @@
           },
           "404": {
             "schema": {
-              "$ref": "#/definitions/IdNotFoundError"
+              "$ref": "#/definitions/CarNotFoundError"
             },
             "description": "Erro! A requisição falhou! O carro não foi encontrado."
           },
@@ -196,7 +196,7 @@
           },
           "404": {
             "schema": {
-              "$ref": "#/definitions/IdNotFoundError"
+              "$ref": "#/definitions/CarNotFoundError"
             },
             "description": "Erro! A requisição falhou! O carro não foi encontrado."
           },
@@ -289,7 +289,7 @@
           },
           "404": {
             "schema": {
-              "$ref": "#/definitions/IdNotFoundError"
+              "$ref": "#/definitions/MotorcycleNotFoundError"
             },
             "description": "Erro! A requisição falhou! A moto não foi encontrada."
           },
@@ -339,9 +339,9 @@
           },
           "404": {
             "schema": {
-              "$ref": "#/definitions/IdNotFoundError"
+              "$ref": "#/definitions/MotorcycleNotFoundError"
             },
-            "description": "Erro! A requisição falhou! a moto não foi encontrada."
+            "description": "Erro! A requisição falhou! A moto não foi encontrada."
           },
           "422": {
             "schema": {
@@ -378,7 +378,7 @@
           },
           "404": {
             "schema": {
-              "$ref": "#/definitions/IdNotFoundError"
+              "$ref": "#/definitions/MotorcycleNotFoundError"
             },
             "description": "Erro! A requisição falhou! A moto não foi encontrada."
           },
@@ -598,12 +598,21 @@
         }
       }
     },
-    "IdNotFoundError": {
+    "CarNotFoundError": {
       "type": "object",
       "properties": {
         "message": {
           "type": "string",
           "example": "Car not found"
+        }
+      }
+    },
+    "MotorcycleNotFoundError": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "Motorcycle not found"
         }
       }
     }
