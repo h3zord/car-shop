@@ -92,6 +92,8 @@ const motorcycles = [
 // Conecta ao MongoDB
 mongoose.connect(url)
   // eslint-disable-next-line arrow-body-style
+  .then(() => Car.deleteMany({}))
+  .then(() => Motorcycle.deleteMany({}))
   .then(() => Car.create(cars))
   .then(() => Motorcycle.create(motorcycles))
   .then(() => {
