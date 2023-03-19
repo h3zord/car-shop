@@ -11,7 +11,7 @@ carRoutes.post(
     .create()
 
   // #swagger.tags = ['Cars']
-  // #swagger.summary = 'Criar um novo carro'
+  // #swagger.summary = 'Cadastrar um novo carro'
   // #swagger.description = 'Endpoint para cadastrar um novo carro no banco de dados.'
 
   /* #swagger.parameters['info'] = {
