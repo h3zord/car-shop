@@ -57,7 +57,7 @@ docker compose up -d
 
 ### - Cars
 #### Método post:
-- /cars ➜ Cria um novo carro.
+- /cars ➜ Cadastra um novo carro.
 
 #### Método get:
 - /cars ➜ Lista todos os carros.
@@ -73,7 +73,7 @@ docker compose up -d
 
 ### - Motorcycles
 #### Método post:
-- /motorcycles ➜ Cria um nova moto.
+- /motorcycles ➜ Cadastra uma nova moto.
 
 #### Método get:
 - /motorcycles ➜ Lista todas as motos.
