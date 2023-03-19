@@ -11,7 +11,7 @@ motorcycleRoutes.post(
     .create()
   
   // #swagger.tags = ['Motorcycles']
-  // #swagger.summary = 'Criar uma nova moto'
+  // #swagger.summary = 'Cadastrar uma nova moto'
   // #swagger.description = 'Endpoint para cadastrar um nova moto no banco de dados.'
 
   /* #swagger.parameters['info'] = {
