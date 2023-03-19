@@ -69,6 +69,8 @@ docker compose up -d
 #### Método delete:
 - /cars/:id ➜ Deleta um carro buscando pelo seu ID.
 
+<br/>
+
 ### - Motorcycles
 #### Método post:
 - /motorcycles ➜ Cria um nova moto.
