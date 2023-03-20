@@ -17,13 +17,13 @@ motorcycleRoutes.post(
   /* #swagger.parameters['info'] = {
     in: 'body',
     type: 'object',
-    description: 'Informações necessárias para criar uma nova moto.',
+    description: 'Informações necessárias para cadastrar uma nova moto.',
     schema: { $ref: "#/definitions/Motorcycle" },
   } */
 
   /* #swagger.responses[201] = { 
     schema: { $ref: "#/definitions/Motorcycle" },
-    description: 'Requisição para criar uma nova moto efetuada com sucesso!' 
+    description: 'Requisição para cadastrar uma nova moto efetuada com sucesso!' 
  } */
 
   /* #swagger.responses[400] = { 

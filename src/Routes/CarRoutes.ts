@@ -17,13 +17,13 @@ carRoutes.post(
   /* #swagger.parameters['info'] = {
     in: 'body',
     type: 'object',
-    description: 'Informações necessárias para criar um novo carro.',
+    description: 'Informações necessárias para cadastrar um novo carro.',
     schema: { $ref: "#/definitions/Car" },
   } */
 
   /* #swagger.responses[201] = { 
     schema: { $ref: "#/definitions/Car" },
-    description: 'Requisição para criar um novo carro efetuada com sucesso!' 
+    description: 'Requisição para cadastrar um novo carro efetuada com sucesso!' 
  } */
 
   /* #swagger.responses[400] = { 
