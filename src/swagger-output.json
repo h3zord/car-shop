@@ -33,13 +33,13 @@
         "tags": [
           "Cars"
         ],
-        "summary": "Criar um novo carro",
+        "summary": "Cadastrar um novo carro",
         "description": "Endpoint para cadastrar um novo carro no banco de dados.",
         "parameters": [
           {
             "name": "info",
             "in": "body",
-            "description": "Informações necessárias para criar um novo carro.",
+            "description": "Informações necessárias para cadastrar um novo carro.",
             "schema": {
               "$ref": "#/definitions/Car"
             }
@@ -50,7 +50,7 @@
             "schema": {
               "$ref": "#/definitions/Car"
             },
-            "description": "Requisição para criar um novo carro efetuada com sucesso!"
+            "description": "Requisição para cadastrar um novo carro efetuada com sucesso!"
           },
           "400": {
             "schema": {
@@ -215,13 +215,13 @@
         "tags": [
           "Motorcycles"
         ],
-        "summary": "Criar uma nova moto",
+        "summary": "Cadastrar uma nova moto",
         "description": "Endpoint para cadastrar um nova moto no banco de dados.",
         "parameters": [
           {
             "name": "info",
             "in": "body",
-            "description": "Informações necessárias para criar uma nova moto.",
+            "description": "Informações necessárias para cadastrar uma nova moto.",
             "schema": {
               "$ref": "#/definitions/Motorcycle"
             }
@@ -232,7 +232,7 @@
             "schema": {
               "$ref": "#/definitions/Motorcycle"
             },
-            "description": "Requisição para criar uma nova moto efetuada com sucesso!"
+            "description": "Requisição para cadastrar uma nova moto efetuada com sucesso!"
           },
           "400": {
             "schema": {
