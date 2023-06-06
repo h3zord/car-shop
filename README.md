@@ -13,13 +13,13 @@ O <strong>Car Shop</strong> é uma API de gerenciamento de concessionárias que 
 
 ## O que foi desenvolvido?
 
-O <strong>Car Shop</strong> é uma API projetada para gerenciar uma concessionária de veículos, com estruturas de dados distintas para carros e motos. O Docker foi usado para criar dois containers: um para o Node, responsável por executar o JavaScript fora do navegador, e outro para o banco de dados MongoDB.
+O <strong>Car Shop</strong> é uma API projetada para gerenciar uma concessionária de veículos, com estruturas de dados distintas para carros e motos. O docker foi usado para criar dois containers: um para o node.js, responsável por executar o javascript fora do navegador, e outro para o banco de dados mongoDB.
 
-A linguagem utilizada para escrever a aplicação é o TypeScript, que é uma linguagem de tipagem estática. O Express.js gerencia as rotas, processa as requisições HTTP e define middlewares. A organização das pastas segue o modelo MSC (Model, Service, e Controller), aplicando princípios da programação orientada a objetos.
+A linguagem utilizada para escrever a aplicação é o typeScript, que é uma linguagem de tipagem estática. O express.js gerencia as rotas, processa as requisições HTTP e define middlewares. A organização das pastas segue o modelo MSC (Model, Service, e Controller), aplicando princípios da programação orientada a objetos.
 
-O ODM Mongoose foi utilizado para modelar e manipular o banco de dados, e os endpoints da API permitem realizar as operações CRUD (Criar, Ler, Atualizar e Excluir). Para a implementação dos testes de unidade, foram usadas as bibliotecas Mocha, Chai e Sinon, com desenvolvimento orientado a testes (TDD), resultando em uma cobertura de aproximadamente 85% da camada Service.
+O ODM mongoose foi utilizado para modelar e manipular o banco de dados, e os endpoints da API permitem realizar as operações CRUD (Criar, Ler, Atualizar e Excluir). Para a implementação dos testes de unidade, foram usadas as bibliotecas mocha, chai e sinon, com desenvolvimento orientado a testes (TDD), resultando em uma cobertura de aproximadamente 85% da camada Service.
 
-## Linguagens e ferramentas:
+## Linguagens e ferramentas
 - Docker
 - Node.js
 - Typescript
@@ -30,7 +30,7 @@ O ODM Mongoose foi utilizado para modelar e manipular o banco de dados, e os end
 - Chai
 - Sinon
 
-## Instalação e execução com Docker:
+## Instalação e execução com docker
 
 ### 1 - Clone o repositório:
 ```
