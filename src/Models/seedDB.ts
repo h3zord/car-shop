@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 import mongoose, { Schema } from 'mongoose';
 import 'dotenv/config';
 import ICar from '../Interfaces/ICar';
 import IMotorcycle from '../Interfaces/IMotorcycle';
 
-// eslint-disable-next-line max-len
-const url = `mongodb://${process.env.MONGOUSER}:${process.env.MONGOPASSWORD}@${process.env.MONGOHOST}:${process.env.MONGOPORT}`;
+// const url = `mongodb://${process.env.MONGOUSER}:${process.env.MONGOPASSWORD}@${process.env.MONGOHOST}:${process.env.MONGOPORT}`;
+const url = process.env.MONGO_URL as string;
 
 const carSchema: Schema = new mongoose.Schema({
   model: String,

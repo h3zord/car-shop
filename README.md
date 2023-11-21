@@ -13,7 +13,7 @@ O <strong>Car Shop</strong> é uma API de gerenciamento de concessionárias que 
 
 ## O que foi desenvolvido?
 
-O <strong>Car Shop</strong> é uma API projetada para gerenciar uma concessionária de veículos, com estruturas de dados distintas para carros e motos. O docker foi usado para criar dois containers: um para o node.js, responsável por executar o javascript fora do navegador, e outro para o banco de dados mongoDB.
+O <strong>Car Shop</strong> é uma API projetada para gerenciar uma concessionária de veículos, com estruturas de dados distintas para carros e motos. O Docker foi usado para criar dois containers: um para o Node.js, responsável por executar o Javascript fora do navegador, e outro para o banco de dados MongoDB.
 
 A linguagem utilizada para escrever a aplicação é o typescript, que é uma linguagem de tipagem estática. O express.js gerencia as rotas, processa as requisições HTTP e define middlewares. A organização das pastas segue o modelo MSC (Model, Service, e Controller), aplicando princípios da programação orientada a objetos.
 
